@@ -5,7 +5,6 @@ A suspicious email was received in a personal mailbox, impersonating **Apple iCl
 
 > **Recipient email intentionally redacted:** `a***@gmail.com`
 
----
 
 ## Case Metadata
 - **Case ID:** PHISH-20260219-ICLOUD-001  
@@ -15,7 +14,6 @@ A suspicious email was received in a personal mailbox, impersonating **Apple iCl
 - **Impersonated Brand:** Apple iCloud  
 - **Severity:** High (credential theft intent likely, brand impersonation confirmed)
 
----
 
 ## Tools Used
 - Email Header Analyzer (online)
@@ -23,7 +21,6 @@ A suspicious email was received in a personal mailbox, impersonating **Apple iCl
 - urlscan.io (URL behavior + redirects)
 - VirusTotal (URL reputation / detections)
 
----
 
 ## 1) Email Summary (Social Engineering)
 ### Lure Characteristics
@@ -38,7 +35,6 @@ A suspicious email was received in a personal mailbox, impersonating **Apple iCl
 
 > Evidence screenshots are stored under `/evidence/` (redacted where needed).
 
----
 
 ## 2) Header & Sender Analysis
 
@@ -67,7 +63,6 @@ Header routing shows multiple unrelated services/domains in the chain. This is n
 **Confirmed brand impersonation / phishing characteristics.**  
 The message was **not** sent from Apple-controlled domains or infrastructure.
 
----
 
 ## 3) URL Analysis
 
@@ -100,30 +95,8 @@ This behavior is consistent with:
 **Malicious redirection chain likely used for phishing delivery/tracking.**  
 Even though the final page appears benign now, the overall context (brand impersonation + cloud-hosted redirect + suspicious sender infra) supports a phishing campaign assessment.
 
----
 
-## 4) Indicators of Compromise (IOCs)
-
-### Email Addresses
-- `nooreply.dchqirw@zbuqbahyqmbtrim[.]us`
-- `ddmxvizwoyfpd@pkaquaweiki[.]gfurlan[.]com[.]br`
-
-### Domains
-- `zbuqbahyqmbtrim[.]us`
-- `pkaquaweiki[.]gfurlan[.]com[.]br`
-- `storage[.]googleapis[.]com`
-- `trackoriginal[.]com`
-
-### URLs (Defanged)
-- `hxxps[://]storage[.]googleapis[.]com/whilewait/comessuccess[.]html`
-- `hxxps[://]trackoriginal[.]com/`
-
-### IP Address (Mail Transport)
-- `89[.]252[.]161[.]234`
-
----
-
-## 5) Recommended Actions
+## 4) Recommended Actions
 
 ### For the Recipient
 - Do not click links or submit credentials.
@@ -140,13 +113,9 @@ Even though the final page appears benign now, the overall context (brand impers
   - iCloud/Apple impersonation keywords + non-Apple sender domains
   - cloud-hosted redirect patterns (e.g., `storage.googleapis.com/*` used as a hop)
 
----
 
-## 6) Evidence (Screenshots / Artifacts)
+## 5) Evidence - [Screenshots / Artifacts](https://github.com/Emmy241/phishing-email-analysis-URL-/tree/5ea78a8e95a0ebdfa0a76f583f166927a1236b8d/evidence)
 
-
-
----
 
 ## 6) Notes / Limitations
 - Final landing page appears benign **at time of analysis**; attacker infrastructure may change rapidly.
