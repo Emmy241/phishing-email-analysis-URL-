@@ -8,8 +8,8 @@ A suspicious email was received in a personal mailbox, impersonating **Apple iCl
 
 ## Case Metadata
 - **Case ID:** PHISH-20260219-ICLOUD-001  
-- **Date Observed:** 2026-02-19  
-- **Analyst:** (Your Name / Handle)  
+- **Date Observed:** 2026-02-20 
+- **Analyst:** Emmanuel Ajayi 
 - **Category:** Phishing / Brand Impersonation / Malicious Redirect  
 - **Impersonated Brand:** Apple iCloud  
 - **Severity:** High (credential theft intent likely, brand impersonation confirmed)
@@ -114,10 +114,12 @@ Even though the final page appears benign now, the overall context (brand impers
   - cloud-hosted redirect patterns (e.g., `storage.googleapis.com/*` used as a hop)
 
 
-## 5) Evidence - [Screenshots / Artifacts](https://github.com/Emmy241/phishing-email-analysis-URL-/tree/5ea78a8e95a0ebdfa0a76f583f166927a1236b8d/evidence)
+## 5) Indicators of Compromise - [IOCs](https://github.com/Emmy241/phishing-email-analysis-URL-/blob/677ad1d5964dd858bfb69861c0ecdbfebd44b46b/iocs/ioc.txt)
+
+## 6) Evidence - [Screenshots / Artifacts](https://github.com/Emmy241/phishing-email-analysis-URL-/tree/5ea78a8e95a0ebdfa0a76f583f166927a1236b8d/evidence)
 
 
-## 6) Notes / Limitations
+## 7) Notes / Limitations
 - Final landing page appears benign **at time of analysis**; attacker infrastructure may change rapidly.
 - This assessment is based on header inconsistencies, impersonation behavior, and redirect chain design.
 - Additional confirmation can be achieved by comparing DKIM/DMARC alignment results (if available from tooling output).
