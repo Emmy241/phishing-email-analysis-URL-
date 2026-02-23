@@ -69,13 +69,7 @@ Terminal prints a hop-by-hop chain with status codes and locations. JSON output 
 
 ---
 
-## Repo Layout
+## License
 
-```
-.
-├── redirect_mapper.py
-├── README.md
-├── requirements.txt
-├── .gitignore
-└── evidence/
-```
+[MIT](./LICENSE) © 2026 Emmanuel Ajayi
+
